@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "description": "Általános díszmadár-genetikai mutációadatbázis. A nevek szabadon módosíthatók.",
+  "species": "generic_bird",
+  "symbols": {
+    "male": "ZZ",
+    "female": "ZW",
+    "wild_type": "+",
+    "unknown": "?"
+  },
+  "inheritance_types": {
+    "autosomal_dominant": "Autoszomális domináns",
+    "autosomal_recessive": "Autoszomális recesszív",
+    "z_linked_recessive": "Z-kromoszómához kötött recesszív",
+    "z_linked_dominant": "Z-kromoszómához kötött domináns"
+  },
+  "mutations": [
+    {
+      "id": "opal",
+      "name": "Opál",
+      "symbol": "o",
+      "inheritance": "autosomal_recessive",
+      "lethal": false,
+      "lethal_genotype": null,
+      "description": "Példa autoszomális recesszív mutáció."
+    },
+    {
+      "id": "dominant_example",
+      "name": "Domináns példa",
+      "symbol": "D",
+      "inheritance": "autosomal_dominant",
+      "lethal": false,
+      "lethal_genotype": null,
+      "description": "Példa autoszomális domináns mutáció."
+    },
+    {
+      "id": "ino",
+      "name": "Ino",
+      "symbol": "ino",
+      "inheritance": "z_linked_recessive",
+      "lethal": false,
+      "lethal_genotype": null,
+      "description": "Példa Z-kromoszómához kötött recesszív mutáció."
+    },
+    {
+      "id": "lethal_example",
+      "name": "Letális példa",
+      "symbol": "L",
+      "inheritance": "autosomal_dominant",
+      "lethal": true,
+      "lethal_genotype": "homozygous",
+      "description": "Heterozigóta életképes, homozigóta letális példa."
+    }
+  ]
+}
