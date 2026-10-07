@@ -1,7 +1,7 @@
 # finchpredict
 Genetics prediction for aviary finches
 
-# Díszmadár genetikai predikció – első verzió
+# AmanDNA | Díszmadár genetikai predikció – v 1.0
 
 ## Futtatás
 
