@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650">
+<g id="bird">
+<path id="tail_base" fill="#20242A" d="M690 405 C850 410 1025 450 1145 555 C1010 505 850 455 660 435 Z"/>
+<path id="tail_highlight" fill="#343A42" d="M695 414 C850 425 1010 466 1120 535 C975 474 850 445 690 428 Z"/>
+<ellipse id="body_base" fill="#C99578" cx="510" cy="330" rx="255" ry="160"/>
+<path id="belly_base" fill="#F0E6D7" d="M330 355 C395 420 530 470 675 415 C630 485 520 515 420 470 C355 442 315 405 300 365 Z"/>
+<path id="black_flank" fill="#1D2024" d="M610 395 C655 385 700 400 720 430 C680 458 640 455 605 435 Z"/>
+<path id="wing_base" fill="#62574C" d="M350 285 C430 235 565 250 710 350 C675 405 610 425 520 390 C450 365 390 330 350 285 Z"/>
+<path id="wing_primary" fill="#35383C" d="M500 350 C585 355 660 375 735 415 C675 435 600 420 530 395 Z"/>
+<path id="wing_pattern" fill="#8A7767" d="M375 285 C430 265 500 270 565 295 C535 305 505 315 470 330 C425 320 395 305 375 285 Z"/>
+<ellipse id="head_base" fill="#9EA4AB" cx="315" cy="215" rx="125" ry="115"/>
+<path id="mask" fill="#17191C" d="M190 210 C220 155 315 135 375 175 C390 210 375 250 340 270 C290 285 225 260 190 210 Z"/>
+<path id="bib" fill="#17191C" d="M250 275 C290 295 350 295 390 275 C405 320 385 355 340 370 C295 350 265 320 250 275 Z"/>
+<path id="beak_upper" fill="#E88925" d="M195 205 L85 245 L195 260 Z"/>
+<path id="beak_lower" fill="#F3A53C" d="M195 260 L85 245 L195 280 Z"/>
+<circle id="eye_outer" fill="#15171A" cx="275" cy="202" r="25"/>
+<circle id="eye_iris" fill="#7B4B2C" cx="275" cy="202" r="14"/>
+<circle id="eye_pupil" fill="#050505" cx="275" cy="202" r="8"/>
+<circle id="eye_glint" fill="#FFFFFF" cx="280" cy="197" r="3"/>
+<path id="legs_base" fill="none" stroke="#D66A2B" stroke-width="13" stroke-linecap="round" d="M425 450 L395 535 M555 455 L535 535"/>
+<path id="feet" fill="none" stroke="#D66A2B" stroke-width="10" stroke-linecap="round" d="M395 535 L355 550 M395 535 L420 550 M535 535 L500 550 M535 535 L560 550"/>
+<path id="claws" fill="none" stroke="#25282C" stroke-width="6" stroke-linecap="round" d="M355 550 l-10 14 M420 550 l10 13 M500 550 l-8 14 M560 550 l10 12"/>
+</g></svg>

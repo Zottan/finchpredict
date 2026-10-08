@@ -1,0 +1,245 @@
+{
+  "schema_version": "2.0",
+  "database_name": "Díszmadár genetikai mutáció-adatbázis",
+  "description": "Szerkeszthető séma több-lokuszos genotípus- és fenotípus-számításhoz.",
+  "inheritance_types": {
+    "autosomal_dominant": "Autoszomális domináns",
+    "autosomal_recessive": "Autoszomális recesszív",
+    "z_linked_dominant": "Z-kapcsolt domináns",
+    "z_linked_recessive": "Z-kapcsolt recesszív",
+    "unknown": "Ismeretlen"
+  },
+  "mutation_template": {
+    "id": "unique_id",
+    "name": "Mutáció neve",
+    "aliases": [],
+    "symbol": "m",
+    "inheritance": {
+      "type": "autosomal_recessive",
+      "chromosome": "autosomal",
+      "locus": "LOCUS_NAME"
+    },
+    "alleles": {
+      "wild_type": "+",
+      "mutant": "m"
+    },
+    "dominance": {
+      "heterozygote": "carrier",
+      "homozygous": "expressed",
+      "hemizygous_female": null
+    },
+    "lethality": {
+      "enabled": false,
+      "genotype": null,
+      "stage": null,
+      "survival_probability": 1.0
+    },
+    "phenotype": {
+      "description": "A fenotípus leírása.",
+      "effects": [
+        {
+          "type": "color",
+          "target": "body_base",
+          "operation": "modify",
+          "parameter": "lightness",
+          "value": 0.2
+        }
+      ]
+    },
+    "visual": {
+      "enabled": true,
+      "layers": [
+        "body_base"
+      ],
+      "render_mode": "modify_existing"
+    },
+    "linkage": {
+      "enabled": false,
+      "linkage_group": null,
+      "map_position_cM": null
+    },
+    "notes": ""
+  },
+  "mutations": [
+    {
+      "id": "opal",
+      "name": "Opál",
+      "aliases": [],
+      "symbol": "o",
+      "inheritance": {
+        "type": "autosomal_recessive",
+        "chromosome": "autosomal",
+        "locus": "OPAL"
+      },
+      "alleles": {
+        "wild_type": "+",
+        "mutant": "o"
+      },
+      "dominance": {
+        "heterozygote": "carrier",
+        "homozygous": "expressed",
+        "hemizygous_female": null
+      },
+      "lethality": {
+        "enabled": false,
+        "genotype": null,
+        "stage": null,
+        "survival_probability": 1.0
+      },
+      "phenotype": {
+        "description": "Példa autoszomális recesszív mutáció.",
+        "effects": [
+          {
+            "type": "color",
+            "target": "body_base",
+            "operation": "modify",
+            "parameter": "lightness",
+            "value": 0.15
+          },
+          {
+            "type": "color",
+            "target": "wing_base",
+            "operation": "modify",
+            "parameter": "lightness",
+            "value": 0.2
+          }
+        ]
+      },
+      "visual": {
+        "enabled": true,
+        "layers": [
+          "body_base",
+          "wing_base",
+          "tail_base"
+        ],
+        "render_mode": "modify_existing"
+      },
+      "linkage": {
+        "enabled": false,
+        "linkage_group": null,
+        "map_position_cM": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "ino",
+      "name": "Ino",
+      "aliases": [],
+      "symbol": "ino",
+      "inheritance": {
+        "type": "z_linked_recessive",
+        "chromosome": "Z",
+        "locus": "INO"
+      },
+      "alleles": {
+        "wild_type": "+",
+        "mutant": "ino"
+      },
+      "dominance": {
+        "heterozygote": "carrier_male",
+        "homozygous": "expressed_male",
+        "hemizygous_female": "expressed"
+      },
+      "lethality": {
+        "enabled": false,
+        "genotype": null,
+        "stage": null,
+        "survival_probability": 1.0
+      },
+      "phenotype": {
+        "description": "Példa Z-kapcsolt recesszív mutáció.",
+        "effects": [
+          {
+            "type": "melanin",
+            "target": "body",
+            "operation": "reduce",
+            "parameter": "amount",
+            "value": 0.85
+          },
+          {
+            "type": "melanin",
+            "target": "wing",
+            "operation": "reduce",
+            "parameter": "amount",
+            "value": 0.9
+          },
+          {
+            "type": "eye",
+            "target": "eye_iris",
+            "operation": "set",
+            "parameter": "hex",
+            "value": "#C98A75"
+          }
+        ]
+      },
+      "visual": {
+        "enabled": true,
+        "layers": [
+          "body_base",
+          "wing_base",
+          "wing_primary",
+          "tail_base",
+          "eye_iris"
+        ],
+        "render_mode": "modify_existing"
+      },
+      "linkage": {
+        "enabled": true,
+        "linkage_group": "Z",
+        "map_position_cM": null
+      },
+      "notes": "Madaraknál hím ZZ, tojó ZW."
+    },
+    {
+      "id": "lethal_example",
+      "name": "Letális példa",
+      "aliases": [],
+      "symbol": "L",
+      "inheritance": {
+        "type": "autosomal_dominant",
+        "chromosome": "autosomal",
+        "locus": "LETHAL1"
+      },
+      "alleles": {
+        "wild_type": "+",
+        "mutant": "L"
+      },
+      "dominance": {
+        "heterozygote": "expressed",
+        "homozygous": "lethal",
+        "hemizygous_female": null
+      },
+      "lethality": {
+        "enabled": true,
+        "genotype": "L/L",
+        "stage": "embryonic",
+        "survival_probability": 0.0
+      },
+      "phenotype": {
+        "description": "Demonstrációs domináns, homozigóta letális faktor.",
+        "effects": [
+          {
+            "type": "color",
+            "target": "body_base",
+            "operation": "set",
+            "parameter": "hex",
+            "value": "#D9A066"
+          }
+        ]
+      },
+      "visual": {
+        "enabled": true,
+        "layers": [
+          "body_base"
+        ],
+        "render_mode": "modify_existing"
+      },
+      "linkage": {
+        "enabled": false,
+        "linkage_group": null,
+        "map_position_cM": null
+      },
+      "notes": "A letális utódot külön kell kezelni, majd az élő utódokra normalizálni."
+    }
+  ]
+}

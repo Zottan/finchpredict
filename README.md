@@ -1,74 +1,17 @@
-# finchpredict
-Genetics prediction for aviary finches
+# Díszmadár genetikai kalkulátor
 
-# AmanDNA | Díszmadár genetikai predikció – v 1.0
+Kísérleti, fajfüggetlen genetikai motor és fenotípus-renderelő.
 
-## Futtatás
+## Részek
+- `genetics_app.py` – Python/Tkinter prototípus
+- `mutations_schema_extended.json` – bővített mutációs adatmodell
+- `web/` – GitHub Pages-kompatibilis böngészős UAT
+- `web/amandina_uat.svg` – rétegezett ékfarkú amandina tesztmodell
 
-Python 3.10+ szükséges, Python 3.12 ajánlott.
+## Böngészős UAT
+A `web/index.html` statikus JavaScript alkalmazás. A test, has, fej, szárny, szárnyminta, farok, csőr és láb színe élőben módosítható, a módosított SVG exportálható.
 
-A mappában legyen együtt:
+## Tervezett architektúra
+genotípus → genetikai motor → fenotípus → vizuális paraméterek → SVG
 
-- `genetics_app.py`
-- `mutations.json`
-
-Futtatás:
-
-```bash
-python genetics_app.py
-```
-
-A program kizárólag a Python standard könyvtárát használja, ezért külön `pip install`
-nem szükséges.
-
-## Mutáció módosítása
-
-A `mutations.json` szerkeszthető.
-
-Példa:
-
-```json
-{
-  "id": "opal",
-  "name": "Opál",
-  "symbol": "o",
-  "inheritance": "autosomal_recessive",
-  "lethal": false,
-  "lethal_genotype": null
-}
-```
-
-A `name` mezőben szabadon megváltoztatható a mutáció neve.
-
-## Öröklésmenetek
-
-- `autosomal_dominant`
-- `autosomal_recessive`
-- `z_linked_recessive`
-- `z_linked_dominant`
-
-Madár ivari rendszer:
-
-- hím: ZZ
-- tojó: ZW
-
-## Következő fejlesztési irány
-
-A későbbi ZebraCalc-szerű változatban érdemes különválasztani:
-
-1. genetikai motor
-2. fajadatbázis
-3. mutációadatbázis
-4. fenotípus-megjelenítés
-5. madárrajz/renderelő rendszer
-6. keresztezési fa
-7. több gén egyidejű számítása
-8. rekombináció/linkage
-9. genetikai valószínűségek
-10. menthető tenyésztési párok
-
-A rajzokat nem feltétlenül kell egyenként megrajzolni. Célszerű lehet egy
-réteges SVG-rendszer: test + fej + szárny + farok + szem + csőr + színréteg +
-mintázat + mutációspecifikus réteg. Így egyetlen alapmadárból sok fenotípus
-automatikusan előállítható.
-
+A következő nagy lépés a több-lokuszos genetikai motor és a webes UAT összekötése.
